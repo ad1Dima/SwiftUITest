@@ -16,9 +16,10 @@ class ExperimentViewModel : ObservableObject {
 
     var id: String { experiment.id }
     var title: String { experiment.title }
+    var possibleValues: [String] { experiment.values }
     @Published var value: String
 
-    func SetValue(value: String) {
+    func setValue(_ value: String) {
         experimentsManager.experiments[experiment] = value
         self.value = value
     }

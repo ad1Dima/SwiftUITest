@@ -1,12 +1,4 @@
-//
-//  AlertView.swift
-//  SwiftUISettings
-//
-//  Created by Dmitrii Adodin on 01.04.2022.
-//
-
 import Foundation
-
 import SwiftUI
 
 struct AlertView: View {

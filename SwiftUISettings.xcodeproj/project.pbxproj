@@ -27,6 +27,8 @@
 		15CF814028094D2F009C346F /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF813E28094D2F009C346F /* Experiment.swift */; };
 		15CF8143280957D4009C346F /* ExperimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF8142280957D4009C346F /* ExperimentViewModel.swift */; };
 		15CF8144280957D4009C346F /* ExperimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF8142280957D4009C346F /* ExperimentViewModel.swift */; };
+		15CF81462809808E009C346F /* ActionSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF81452809808E009C346F /* ActionSheetButton.swift */; };
+		15CF81472809808E009C346F /* ActionSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF81452809808E009C346F /* ActionSheetButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,7 @@
 		15CF813B280943D5009C346F /* ExperimentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsManager.swift; sourceTree = "<group>"; };
 		15CF813E28094D2F009C346F /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		15CF8142280957D4009C346F /* ExperimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewModel.swift; sourceTree = "<group>"; };
+		15CF81452809808E009C346F /* ActionSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 				157D3E3C27F6B699005E8B55 /* SettingsView.swift */,
 				157D3E3D27F6B69C005E8B55 /* Assets.xcassets */,
 				157D3E5C27F6D759005E8B55 /* SettingsManager.swift */,
+				15CF81452809808E009C346F /* ActionSheetButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -233,6 +237,7 @@
 				157D3E5D27F6D759005E8B55 /* SettingsManager.swift in Sources */,
 				15CF8143280957D4009C346F /* ExperimentViewModel.swift in Sources */,
 				157D3E4D27F6B69C005E8B55 /* SettingsView.swift in Sources */,
+				15CF81462809808E009C346F /* ActionSheetButton.swift in Sources */,
 				15CF813F28094D2F009C346F /* Experiment.swift in Sources */,
 				157D3E6427F6E89E005E8B55 /* AlertViewModel.swift in Sources */,
 				157D3E4B27F6B69C005E8B55 /* SwiftUISettingsApp.swift in Sources */,
@@ -249,6 +254,7 @@
 				157D3E5E27F6D759005E8B55 /* SettingsManager.swift in Sources */,
 				15CF8144280957D4009C346F /* ExperimentViewModel.swift in Sources */,
 				157D3E4E27F6B69C005E8B55 /* SettingsView.swift in Sources */,
+				15CF81472809808E009C346F /* ActionSheetButton.swift in Sources */,
 				15CF814028094D2F009C346F /* Experiment.swift in Sources */,
 				157D3E6527F6E89E005E8B55 /* AlertViewModel.swift in Sources */,
 				157D3E4C27F6B69C005E8B55 /* SwiftUISettingsApp.swift in Sources */,

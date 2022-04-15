@@ -55,8 +55,11 @@ struct SettingsView: View {
 
             Section (header: Text("Experiments")) {
                 ForEach(settings.experiments, id: \.id) { expVM in
-                    Button(
-                        action: {
+                    ActionSheetButton (
+                        actionSheetTitle: expVM.title,
+                        actionSheetValues: expVM.possibleValues,
+                        selectedAction: {
+                            expVM.setValue($0)
                         }
                     ) {
                         HStack {
