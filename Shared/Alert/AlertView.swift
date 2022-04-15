@@ -18,7 +18,7 @@ struct AlertView: View {
                 alertViewModel.alertTitle,
                 isPresented: $alertViewModel.showingAlert) {
                     Button("OK") {
-                        alertViewModel.messageShowingComplete()
+                        alertViewModel.buttonPressed(buttonId: 0)
                     }
                 }
     }

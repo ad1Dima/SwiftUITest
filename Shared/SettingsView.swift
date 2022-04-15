@@ -32,6 +32,7 @@ struct SettingsView: View {
                         }) {
                             Text("Download some track")
                         }
+                        .foregroundColor(.accentColor)
                         .padding()
                     Button(
                         action: {
@@ -63,11 +64,13 @@ struct SettingsView: View {
                                 .foregroundColor(.black)
                             Spacer()
                             Text(expVM.value)
+                                .foregroundColor(.accentColor)
                         }
                     }
                 }
             }
         }
+        .buttonStyle(PlainButtonStyle())
         .navigationTitle("Settings")
     }
 }

@@ -13,39 +13,19 @@ protocol AlertPresenter {
 }
 
 class AlertViewModel: ObservableObject, AlertPresenter {
-    @Published var showingAlert = false {
-        didSet {
-            guard showingAlert == false else {
-                return
-            }
-
-            messageShowingComplete()
-        }
-    }
+    @Published var showingAlert = false
     @Published var alertTitle = ""
 
-    var semaphore: DispatchSemaphore?
+    private var complition: (() -> Void)?
 
     func showMessage(_ message: String, complition: @escaping () -> Void) {
         alertTitle = message
         showingAlert = true
 
-        let semaphore = DispatchSemaphore(value: 0)
-        self.semaphore = semaphore
-
-        Task {
-            await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>)  in
-                semaphore.wait()
-                continuation.resume()
-            }
-            DispatchQueue.main.async {
-                complition()
-            }
-        }
+        self.complition = complition
     }
 
-    func messageShowingComplete() {
-        semaphore?.signal()
-        semaphore = nil
+    func buttonPressed(buttonId: Int) {
+        complition?()
     }
 }
