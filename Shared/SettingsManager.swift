@@ -9,7 +9,7 @@ import Foundation
 
 class SettingsManager {
 
-    public static let sharedInstance = SettingsManager()
+    static let sharedInstance = SettingsManager()
 
     private init() {
     }

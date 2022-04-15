@@ -13,42 +13,62 @@ struct SettingsView: View {
     @ObservedObject var settings: SettingsViewModel
 
     var body: some View {
-        VStack {
-            Toggle(isOn: $settings.useSystemTheme) {
-                Text("Use system theme")
-            }
-            Toggle(isOn: $settings.useDarkTheme) {
-                Text("Use dark theme")
-            }
-            Spacer()
-            Toggle(isOn: $settings.useOfflineMode) {
-                Text("Use offline mode ")
-            }
-            Button(
-                action: {
-                    settings.downloadSomeTrack()
-                }) {
-                    Text("Download some track")
+        List {
+            Section {
+                VStack {
+                    Toggle(isOn: $settings.useSystemTheme) {
+                        Text("Use system theme")
+                    }
+                    Toggle(isOn: $settings.useDarkTheme) {
+                        Text("Use dark theme")
+                    }
+                    Spacer()
+                    Toggle(isOn: $settings.useOfflineMode) {
+                        Text("Use offline mode ")
+                    }
+                    Button(
+                        action: {
+                            settings.downloadSomeTrack()
+                        }) {
+                            Text("Download some track")
+                        }
+                        .padding()
+                    Button(
+                        action: {
+                            settings.clearCache()
+                        }) {
+                            Text("Clear cache")
+                                .foregroundColor(Color.red)
+                        }
+                        .padding()
+                    Spacer()
+                    Toggle(isOn: $settings.boolSetting1) {
+                        Text("Bool setting")
+                    }
+                    Toggle(isOn: $settings.opposideBoolSetting1) {
+                        Text("opposide setting")
+                    }
+                    AlertView(alertViewModel: alertViewModel)
                 }
-                .padding()
-            Button(
-                action: {
-                    settings.clearCache()
-                }) {
-                    Text("Clear cache")
-                        .foregroundColor(Color.red)
+            }
+
+            Section (header: Text("Experiments")) {
+                ForEach(settings.experiments, id: \.id) { expVM in
+                    Button(
+                        action: {
+                        }
+                    ) {
+                        HStack {
+                            Text(expVM.title)
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text(expVM.value)
+                        }
+                    }
                 }
-                .padding()
-            Spacer()
-            Toggle(isOn: $settings.boolSetting1) {
-                Text("Bool setting")
             }
-            Toggle(isOn: $settings.opposideBoolSetting1) {
-                Text("opposide setting")
-            }
-            AlertView(alertViewModel: alertViewModel)
         }
-        .padding()
+        .navigationTitle("Settings")
     }
 }
 

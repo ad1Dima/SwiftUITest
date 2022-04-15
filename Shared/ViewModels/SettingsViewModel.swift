@@ -1,10 +1,3 @@
-//
-//  SettingsManager.swift
-//  SwiftUISettings
-//
-//  Created by Dmitrii Adodin on 01.04.2022.
-//
-
 import Foundation
 
 class SettingsViewModel : ObservableObject {
@@ -13,6 +6,11 @@ class SettingsViewModel : ObservableObject {
 
     init(alertPresenter: AlertPresenter) {
         self.alertPresenter = alertPresenter
+
+        experiments = []
+        for experiment in ExperimentsManager.sharedInstance.experiments {
+            experiments.append(ExperimentViewModel(experiment: experiment.key, experimentsManager: ExperimentsManager.sharedInstance))
+        }
     }
 
     @Published var useSystemTheme : Bool = false
@@ -31,6 +29,7 @@ class SettingsViewModel : ObservableObject {
 
 
     @Published var boolSetting1 : Bool = false
+    @Published var experiments: [ExperimentViewModel]
 
     var opposideBoolSetting1 : Bool {
         get { !boolSetting1 }

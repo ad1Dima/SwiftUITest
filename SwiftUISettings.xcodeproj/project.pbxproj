@@ -21,6 +21,12 @@
 		157D3E6127F6E434005E8B55 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D3E5F27F6E434005E8B55 /* AlertView.swift */; };
 		157D3E6427F6E89E005E8B55 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D3E6327F6E89E005E8B55 /* AlertViewModel.swift */; };
 		157D3E6527F6E89E005E8B55 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D3E6327F6E89E005E8B55 /* AlertViewModel.swift */; };
+		15CF813C280943D5009C346F /* ExperimentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF813B280943D5009C346F /* ExperimentsManager.swift */; };
+		15CF813D280943D5009C346F /* ExperimentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF813B280943D5009C346F /* ExperimentsManager.swift */; };
+		15CF813F28094D2F009C346F /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF813E28094D2F009C346F /* Experiment.swift */; };
+		15CF814028094D2F009C346F /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF813E28094D2F009C346F /* Experiment.swift */; };
+		15CF8143280957D4009C346F /* ExperimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF8142280957D4009C346F /* ExperimentViewModel.swift */; };
+		15CF8144280957D4009C346F /* ExperimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF8142280957D4009C346F /* ExperimentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,9 @@
 		157D3E5C27F6D759005E8B55 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		157D3E5F27F6E434005E8B55 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		157D3E6327F6E89E005E8B55 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		15CF813B280943D5009C346F /* ExperimentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsManager.swift; sourceTree = "<group>"; };
+		15CF813E28094D2F009C346F /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		15CF8142280957D4009C346F /* ExperimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +75,12 @@
 		157D3E3A27F6B699005E8B55 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				15CF8141280957AF009C346F /* ViewModels */,
+				15CF813A280942A9009C346F /* Experiments */,
 				157D3E6227F6E886005E8B55 /* Alert */,
 				157D3E3B27F6B699005E8B55 /* SwiftUISettingsApp.swift */,
 				157D3E3C27F6B699005E8B55 /* SettingsView.swift */,
 				157D3E3D27F6B69C005E8B55 /* Assets.xcassets */,
-				157D3E5927F6CA2A005E8B55 /* SettingsViewModel.swift */,
 				157D3E5C27F6D759005E8B55 /* SettingsManager.swift */,
 			);
 			path = Shared;
@@ -100,6 +110,24 @@
 				157D3E6327F6E89E005E8B55 /* AlertViewModel.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		15CF813A280942A9009C346F /* Experiments */ = {
+			isa = PBXGroup;
+			children = (
+				15CF813B280943D5009C346F /* ExperimentsManager.swift */,
+				15CF813E28094D2F009C346F /* Experiment.swift */,
+			);
+			path = Experiments;
+			sourceTree = "<group>";
+		};
+		15CF8141280957AF009C346F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				157D3E5927F6CA2A005E8B55 /* SettingsViewModel.swift */,
+				15CF8142280957D4009C346F /* ExperimentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				157D3E6027F6E434005E8B55 /* AlertView.swift in Sources */,
+				15CF813C280943D5009C346F /* ExperimentsManager.swift in Sources */,
 				157D3E5D27F6D759005E8B55 /* SettingsManager.swift in Sources */,
+				15CF8143280957D4009C346F /* ExperimentViewModel.swift in Sources */,
 				157D3E4D27F6B69C005E8B55 /* SettingsView.swift in Sources */,
+				15CF813F28094D2F009C346F /* Experiment.swift in Sources */,
 				157D3E6427F6E89E005E8B55 /* AlertViewModel.swift in Sources */,
 				157D3E4B27F6B69C005E8B55 /* SwiftUISettingsApp.swift in Sources */,
 				157D3E5A27F6CA2A005E8B55 /* SettingsViewModel.swift in Sources */,
@@ -214,8 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				157D3E6127F6E434005E8B55 /* AlertView.swift in Sources */,
+				15CF813D280943D5009C346F /* ExperimentsManager.swift in Sources */,
 				157D3E5E27F6D759005E8B55 /* SettingsManager.swift in Sources */,
+				15CF8144280957D4009C346F /* ExperimentViewModel.swift in Sources */,
 				157D3E4E27F6B69C005E8B55 /* SettingsView.swift in Sources */,
+				15CF814028094D2F009C346F /* Experiment.swift in Sources */,
 				157D3E6527F6E89E005E8B55 /* AlertViewModel.swift in Sources */,
 				157D3E4C27F6B69C005E8B55 /* SwiftUISettingsApp.swift in Sources */,
 				157D3E5B27F6CA2A005E8B55 /* SettingsViewModel.swift in Sources */,
